@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    <title>Plane Shooter</title>
+    <style>
+        body, html {
+            margin:0; padding:0; overflow:hidden;
+            background: #87CEFA; /* Небесный фон */
+            font-family: sans-serif;
+        }
+        canvas {
+            display: block;
+            margin: 0 auto;
+            background: linear-gradient(#87CEEB, #ffffff);
+            border: 2px solid #333;
+        }
+        #fireButton, #bombButton {
+            position: absolute;
+            bottom: 20px;
+            font-size: 24px;
+            padding: 10px 20px;
+            cursor: pointer;
+            z-index: 999;
+        }
+        #fireButton {
+            left: 40%;
+            transform: translateX(-40%);
+        }
+        #bombButton {
+            left: 60%;
+            transform: translateX(-60%);
+        }
+        #fireButton:active, #bombButton:active {
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="400" height="600"></canvas>
+    <button id="fireButton">Огонь!</button>
+    <button id="bombButton">Бомба</button>
+    <script src="game.js"></script>
+</body>
+</html>
